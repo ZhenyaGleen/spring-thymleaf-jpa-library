@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Author</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+          crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <h1>Create Author</h1>
+    </div>
+    <form action="#" th:action="@{author-create}" th:object="${author}" method="post">
+        <label for="firstName">First Name: </label>
+        <input type="text" id="firstName" th:field="*{firstName}" name="firstName"><br><br>
+        <label for="lastName">Last name:</label>
+        <input type="text" id="lastName" th:field="*{lastName}" name="lastName"><br><br>
+        <br>
+        <input type="submit" value="Create" class="btn btn-success">
+    </form>
+</body>
+</html>
